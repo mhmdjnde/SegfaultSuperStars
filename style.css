@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #008421;
+}
+
+.main-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5%;
+}
+
+.ta-wrapper {
+  background: #3c424a;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 0 7px 7px rgb(0 0 0 / 20%);
+  min-height: 300px;
+  border-radius: 25px;
+}
+
+.heading h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  margin-bottom: 20px;
+}
+.input-wrapper input {
+  outline: none;
+  border: 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  color: white;
+  width: 38vw;
+}
+.input-wrapper button {
+  background: #008421;
+  color: white;
+  border: 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+.todo-item input {
+  background: transparent;
+  border: navajowhite;
+  color: white;
+  outline: none;
+}
+.todo-item i {
+  color: #008421;
+  background: transparent;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-left: 5px;
+}
+.todo-item button:hover {
+  color: white;
+}
+.done {
+  text-decoration: line-through;
+}
+.fa-x {
+  padding: 6px 8px !important;
+}
+
+.readonly-textarea {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.readonly-textarea #tips-textarea {
+  width: 51.5%;
+  margin-top: -11.55%;
+  height: 30vh;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  resize: none;
+  font-size: 16px;
+  outline: none;
+  margin-left: 28%;
+}
+
+.help {
+  display: flex;
+  justify-content: right;
+}
+
+.hlp {
+  width: 30%;
+  margin-top: -20%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+.chat-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 60%;
+  background-color: #3c424a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #008421;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+}
+
+.chat-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: calc(
+    100% - 120px
+  ); /* Adjust this based on the height of the header and input */
+  border-bottom: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #333;
+  background-color: #3c424a;
+  box-sizing: border-box;
+  /* margin-top: 20%; */
+}
+
+.chat-input #jnde {
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.chat-input button {
+  background-color: #008421;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.bot-message {
+  color: lime;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 90%;
+  }
+
+  .readonly-textarea #tips-textarea {
+    width: 230%;
+    margin-left: 15%;
+    margin-top: -30%;
+    height: 40vh;
+  }
+  .hlp {
+    width: 70%;
+    height: 70%;
+    margin-right: 3%;
+    cursor: pointer;
+  }
+}
